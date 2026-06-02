@@ -3,25 +3,6 @@
 #include "sim.h"
 
 
-// design the input one physics function at a time,  mimicking the the frontend
-// if function parameter require a spacecraft attribute we will set the setterand  assign the getter as a parameter of the function
-// but these functions must have an order to them to work, first we start with R
-
-// we will use this!
-// struct SpacecraftState {
-//     Vector3    position;
-//     Quaternion orientation;
-//     float      mass;
-// };
-
-
-
-// SpacecraftState compute_state() {
-//     return {{1,2,3}, {1,0,0,0}, 120.0f};
-// }
-
-// double Thurst, Vector3, double m, Vector3 r, Vector3 v, double area, double dce
-// Matrix3 inertia, Vector3 torque,Vector3 omega, Quaternion q, double dt,  int steps
 
 std::istream& operator>>(std::istream& is, Matrix3& I){
     is >> I.m[0][0] >> I.m[1][1] >> I.m[2][2];
@@ -35,13 +16,15 @@ std::istream& operator>>(std::istream& is, Vector3& v){
 
 }
 
+
 std::istream& operator>>(std::istream& is, Quaternion& q){
     is >> q.w >> q.x >> q.y >> q.z; 
     return is; 
 }
 
+
 struct SpacecraftState {
-    // stuff i will send to the frontend
+
     std::vector<Vector3> position;
     std::vector<Quaternion> quaternion;
     Vector3 acceleration;
