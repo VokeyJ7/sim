@@ -10,14 +10,18 @@ struct Vector3 {
     double z;
 
 };
-struct Quaternion { // 4 dimensional struct
-    double w;// angle component
+
+
+struct Quaternion { 
+    double w;
     double x;
     double y; 
     double z;
 
 
 };
+
+
 struct Matrix3{
     double m[3][3];
 };
