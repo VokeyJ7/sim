@@ -3,14 +3,6 @@
 #include <cmath>
 
 
-// bad practice to use namespace std in header files can cause naming conflicts in files later
-// also .h files talk to each other, simply declare the functions and structs the functions required in the current .h file
-// then declare the functions in the other .h file of the cpp file you want to transfer functions to, then you will
-// be able to use functions from the 1st cpp file in the 2nd cpp file through communication bewteen .h files
-
-// big idea: headers include other headers so they can borrow stuff from each other
-
-// declare the structs used in the functions you export, then declare the functions that require these structs at the bottom
 
 struct Vector3 {
     double x;
