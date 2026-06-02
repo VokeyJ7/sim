@@ -18,6 +18,8 @@ double dotProduct( Vector3 vec3a, Vector3 vec3b ){
  
     return scalar;
 }
+
+
 Vector3 crossProduct( Vector3  vec3a, Vector3 vec3b ){
     
     double a = (vec3a.y * vec3b.z) - (vec3a.z * vec3b.y);
@@ -26,6 +28,8 @@ Vector3 crossProduct( Vector3  vec3a, Vector3 vec3b ){
  
     return {a, b, c};
 }
+
+
 Vector3 matrix_vec3_Multiplication( Matrix3 mat3a, Vector3 vec3a){
     Vector3 result;
     result.x = mat3a.m[0][0] * vec3a.x + mat3a.m[0][1] * vec3a.y + mat3a.m[0][2] * vec3a.z;
@@ -33,6 +37,8 @@ Vector3 matrix_vec3_Multiplication( Matrix3 mat3a, Vector3 vec3a){
     result.z = mat3a.m[2][0] * vec3a.x + mat3a.m[2][1] * vec3a.y + mat3a.m[2][2] * vec3a.z;
     return result;
 }
+
+
 Matrix3 matrixMultiplication(Matrix3 (&mat3a), Matrix3 (&mat3b)){
     Matrix3 result = {}; // initializes a 0 matrix
 
@@ -51,6 +57,7 @@ Matrix3 matrixMultiplication(Matrix3 (&mat3a), Matrix3 (&mat3b)){
     return result;
 }
 
+
 Vector3 vectorAddition(Vector3 vec3a, Vector3 vec3b){
 
     double a = vec3a.x + vec3b.x;
@@ -59,6 +66,8 @@ Vector3 vectorAddition(Vector3 vec3a, Vector3 vec3b){
     
     return {a, b, c};
 }
+
+
 Vector3 vectorSubtraction( Vector3 vec3a, Vector3 vec3b){
     double a = vec3a.x - vec3b.x;
     double b = vec3a.y - vec3b.y;
@@ -66,6 +75,8 @@ Vector3 vectorSubtraction( Vector3 vec3a, Vector3 vec3b){
 
     return {a, b, c};
 }
+
+
 Vector3 scalarMultiplication(Vector3 vec3a, double k){
 
     double a = k * vec3a.x; 
@@ -74,6 +85,8 @@ Vector3 scalarMultiplication(Vector3 vec3a, double k){
 
     return {a, b, c};
 }
+
+
 Vector3 scalarDivision(Vector3 vec3a, double k){
 
     double a = vec3a.x / k; 
@@ -82,9 +95,13 @@ Vector3 scalarDivision(Vector3 vec3a, double k){
 
     return {a, b, c};
 }
+
+
 double magnitude(Vector3 vec3){
     return sqrt(pow(vec3.x, 2) + pow(vec3.y, 2) + pow(vec3.z, 2));
 }
+
+
 Vector3 unit(Vector3 (&vec3)){
     double x = vec3.x;
     double y = vec3.y;
