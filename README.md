@@ -97,18 +97,6 @@ The simulator prints:
 * Computed acceleration
 * Position values over time
 
-## Planned Improvements
-
-Future development will include:
-
-* Raylib frontend for real-time spacecraft visualization
-* 3D rendering of spacecraft position and attitude
-* Interactive simulation controls
-* LLM API integration for AI-assisted simulation explanations
-* Scenario presets for orbital motion, attitude control, and thrust maneuvers
-* Data export for plotting and analysis
-* Improved validation against known orbital mechanics cases
-
 ## Technologies Used
 
 * C++
