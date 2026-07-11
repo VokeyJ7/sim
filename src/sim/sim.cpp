@@ -11,7 +11,7 @@ std::istream& operator>>(std::istream& is, Matrix3& I){
 
 
 std::istream& operator>>(std::istream& is, Vector3& v){
-    is >> v.x >> v.y >> v.z; // tells the >> operator to take in 3 numbers as input for velocity
+    is >> v.x >> v.y >> v.z; 
     return is;
 
 }
